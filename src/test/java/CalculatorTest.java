@@ -29,7 +29,7 @@ public class CalculatorTest {
 
         ContaCorrente spy = PowerMockito.spy(contaMock);
         PowerMockito.when(spy, METHOD)
-                .thenReturn( (Double) 990.00);
+                .thenReturn( 990.00);
         double expect = 1000;
         double actual = 0;
         double valorDep = 10;
