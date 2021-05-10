@@ -9,7 +9,6 @@ import org.powermock.modules.junit4.PowerMockRunner;
 @RunWith(PowerMockRunner.class) @PrepareForTest(ContaCorrente.class)
 public class ContaCorrenteTest {
 
-
     @Test
     public void depositarValorPositivo(){
         //arrange
@@ -67,27 +66,6 @@ public class ContaCorrenteTest {
 
         //Assert
         Assert.assertEquals(esperado, actual, 0);
-    }
-
-    @Test
-    public void testDepositarValorComSaldoZero() throws Exception {
-        //arrange
-        ContaCorrente contaMock =  new ContaCorrente();
-        final String METHOD="getSaldo";
-
-        ContaCorrente spy = PowerMockito.spy(contaMock);
-        PowerMockito.when(spy, METHOD)
-                .thenReturn( (Double) 1000.00);
-        double expect = 1010;
-        double actual = 0;
-        double valorDep = 10;
-        //act
-        actual = spy.depositar(valorDep);
-        //assert
-        Assert.assertEquals(expect, actual, 0);
-        PowerMockito.verifyPrivate(spy, Mockito
-                .times(1))
-                .invoke("getSaldo");
     }
 
 }

@@ -8,7 +8,7 @@ import org.powermock.modules.junit4.PowerMockRunner;
 import static org.mockito.Mockito.*;
 
 @RunWith( PowerMockRunner.class )
-@PrepareForTest( AgaUtils.class )
+@PrepareForTest( AgaUtils.class)
 public class BookTest {
 
     @Test (expected = NullPointerException.class)

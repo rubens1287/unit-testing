@@ -91,6 +91,24 @@ public class ContaMockTest {
     }
 
     @Test
+    public void testDepositarValorComValorOnze() throws Exception {
+
+        //arrange
+        ContaMock conta =  new ContaMock();
+        double expect = 0.0;
+        double actual;
+
+        //act
+        conta.depositarValor(11);
+
+        actual = conta.getTotal();
+
+        //assert
+        Assert.assertEquals(  expect, actual, 0);
+
+    }
+
+    @Test
     public void testDepositarValorComValorNegativo() throws Exception {
 
         //arrange
