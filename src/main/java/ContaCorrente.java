@@ -13,6 +13,15 @@ public class ContaCorrente {
         this.saldo = saldo;
     }
 
+    public double saque(double valor) {
+        if (getSaldo() <= 0) {
+            System.out.println("Saldo insulficiente");
+        }else {
+            setSaldo(getSaldo() - valor);
+        }
+        return getTotal();
+    }
+
     public double depositar(double valor) {
         if (valor <= 10) {
             if (valor > 0) {

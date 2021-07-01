@@ -6,6 +6,8 @@ import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
+import static org.powermock.api.mockito.PowerMockito.doThrow;
+
 @RunWith(PowerMockRunner.class) @PrepareForTest(ContaCorrente.class)
 public class ContaCorrenteTest {
 
@@ -67,5 +69,6 @@ public class ContaCorrenteTest {
         //Assert
         Assert.assertEquals(esperado, actual, 0);
     }
+
 
 }
